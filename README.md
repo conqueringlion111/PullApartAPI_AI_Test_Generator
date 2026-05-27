@@ -1,3 +1,4 @@
-API test automation framework for pullapart.com using Rest-Assured, Java, testNG and Maven
+AI-Powered API Test Automation framework 
 
-To run from the command line run the following:  mvn  test -Dsurefire.suiteXmlFiles=testsuite.xml -Denterprise.env=https://enterpriseservice.pullapart.com -Dinventory.env=https://inventoryservice.pullapart.com -Dgroups=regression
+PullApartAPI_AI_Test_Generator is a Java-based API test automation framework that utilizes Anthropic Claude API to generate Rest Assured test code.  This project combines api test automation with the power of large language models (LLMs).
+
