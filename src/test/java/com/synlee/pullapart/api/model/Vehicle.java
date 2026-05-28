@@ -1,4 +1,4 @@
-package com.pullapart.api.model;
+package com.synlee.pullapart.api.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

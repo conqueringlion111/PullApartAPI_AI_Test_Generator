@@ -1,10 +1,10 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.pullapart.api.model.Locations;
-import com.pullapart.api.endpoint.Location;
-import com.pullapart.api.properties.AppConstants;
+import com.synlee.pullapart.api.model.Locations;
+import com.synlee.pullapart.api.endpoint.Location;
+import com.synlee.pullapart.api.properties.AppConstants;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;

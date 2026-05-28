@@ -1,4 +1,4 @@
-package com.pullapart.api.properties;
+package com.synlee.pullapart.api.properties;
 
 public class AppConstants {
 

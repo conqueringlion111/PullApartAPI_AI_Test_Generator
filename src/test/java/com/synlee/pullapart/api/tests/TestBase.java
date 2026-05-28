@@ -1,6 +1,6 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
-import com.pullapart.api.utils.JsonReader;
+import com.synlee.pullapart.api.utils.JsonReader;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 

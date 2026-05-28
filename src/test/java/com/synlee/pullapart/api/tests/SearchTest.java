@@ -1,12 +1,12 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import com.pullapart.api.endpoint.Search;
-import com.pullapart.api.helper.URIFormatter;
-import com.pullapart.api.model.Vehicle;
-import com.pullapart.api.payload.SearchPayload;
-import com.pullapart.api.properties.AppConstants;
+import com.synlee.pullapart.api.endpoint.Search;
+import com.synlee.pullapart.api.helper.URIFormatter;
+import com.synlee.pullapart.api.model.Vehicle;
+import com.synlee.pullapart.api.payload.SearchPayload;
+import com.synlee.pullapart.api.properties.AppConstants;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
@@ -18,7 +18,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static com.pullapart.api.payload.SearchPayload.vehicleSearchPayload;
+import static com.synlee.pullapart.api.payload.SearchPayload.vehicleSearchPayload;
 import static io.restassured.RestAssured.given;
 
 public class SearchTest extends TestBase {

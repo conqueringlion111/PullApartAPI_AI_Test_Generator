@@ -1,4 +1,4 @@
-package com.pullapart.api.helper;
+package com.synlee.pullapart.api.helper;
 
 import java.util.StringJoiner;
 

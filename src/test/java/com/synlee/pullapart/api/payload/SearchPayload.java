@@ -1,9 +1,9 @@
-package com.pullapart.api.payload;
+package com.synlee.pullapart.api.payload;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.pullapart.api.model.Vehicle;
+import com.synlee.pullapart.api.model.Vehicle;
 
 import java.util.LinkedHashMap;
 import java.util.List;

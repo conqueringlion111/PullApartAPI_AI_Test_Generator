@@ -1,4 +1,4 @@
-package com.synlee.pullapart.client;
+package com.synlee.qforge.client;
 
 import com.anthropic.client.AnthropicClient;
 import com.anthropic.client.okhttp.AnthropicOkHttpClient;
