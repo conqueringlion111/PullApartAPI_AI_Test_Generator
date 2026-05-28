@@ -1,4 +1,4 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
 import org.testng.annotations.Test;
 

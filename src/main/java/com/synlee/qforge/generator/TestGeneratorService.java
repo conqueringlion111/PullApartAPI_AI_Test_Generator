@@ -1,11 +1,11 @@
-package com.synlee.pullapart.generator;
+package com.synlee.qforge.generator;
 
 import com.anthropic.client.AnthropicClient;
 import com.anthropic.models.messages.ContentBlock;
 import com.anthropic.models.messages.Message;
 import com.anthropic.models.messages.MessageCreateParams;
 import com.anthropic.models.messages.Model;
-import com.synlee.pullapart.client.AnthropicClientProvider;
+import com.synlee.qforge.client.AnthropicClientProvider;
 
 /**
  * QForge -  Module 1: AI Test Generator
@@ -45,7 +45,7 @@ public class TestGeneratorService {
                 2. A validation test (checks response fields)
                 3. A negative test (e.g. 404 not found, invalid input)
             - Include meaningful comments explaining each test
-            - Use proper Java package: com.synlee.pullapart.generator
+            - Use proper Java package: com.synlee.pullapart.api.generator
             
             Return ONLY the Java code. No explanations, no markdown, no code fences.
             Just raw Java code that can be pasted directly into a .java file and compiled.

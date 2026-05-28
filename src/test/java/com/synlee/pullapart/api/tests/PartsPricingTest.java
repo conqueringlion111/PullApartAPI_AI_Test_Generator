@@ -1,8 +1,8 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
-import com.pullapart.api.endpoint.PartsPrice;
-import com.pullapart.api.helper.URIFormatter;
-import com.pullapart.api.properties.AppConstants;
+import com.synlee.pullapart.api.endpoint.PartsPrice;
+import com.synlee.pullapart.api.helper.URIFormatter;
+import com.synlee.pullapart.api.properties.AppConstants;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;

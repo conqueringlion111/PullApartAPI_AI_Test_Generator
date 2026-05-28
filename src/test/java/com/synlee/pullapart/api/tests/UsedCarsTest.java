@@ -1,7 +1,7 @@
-package com.pullapart.api.tests;
+package com.synlee.pullapart.api.tests;
 
-import com.pullapart.api.endpoint.UsedCars;
-import com.pullapart.api.properties.AppConstants;
+import com.synlee.pullapart.api.endpoint.UsedCars;
+import com.synlee.pullapart.api.properties.AppConstants;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;

@@ -1,4 +1,4 @@
-package com.pullapart.api.endpoint;
+package com.synlee.pullapart.api.endpoint;
 
 public enum Make {
     MAKE("/Make");
