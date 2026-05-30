@@ -51,7 +51,7 @@ public class TestBase {
     @DataProvider(name = "dataProvider")
     public Object[][] passData(Method method) throws Exception {
         String className = this.getClass().getSimpleName();
-        String filePath = "src/test/java/com/pullapart/api/dataprovider/" + className + ".json";
+        String filePath = "src/test/java/com/synlee/pullapart/api/dataprovider/" + className + ".json";
         return JsonReader.getData(filePath, method);
     }
 }

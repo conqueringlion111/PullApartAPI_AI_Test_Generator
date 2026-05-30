@@ -35,8 +35,9 @@ public class TestGeneratorTest {
                 - Expected response fields for each location object: locationId (integer), locationName (string), address1 (string), cityName (string),
                 stateName (string), zipCode (string), phoneNumber (string), latitude (float)
                 - Assert against each object by utilizing Response response and response.jsonPath
-                - Returns 200 OK when locations exist
-                - Returns 404 Not Found when invalid zipcode is used
+                - use Rest Assured .then().statusCode() to validate the returned status code
+                - expect 200 status code when locations exist
+                - expect 404 Not Found when invalid zipcode is used
                 - Base URL: https://www.pullapart.com
                 """;
 

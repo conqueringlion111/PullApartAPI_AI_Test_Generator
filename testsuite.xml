@@ -1,11 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Regression Suite" parallel="methods" thread-count="3">
+<suite name="PullApart Test Suite" parallel="methods" thread-count="3">
 
-    <listeners>
-        <listener class-name="listeners.com.synlee.pullapart.api.TestListener"/>
-    </listeners>
-
-    <test name="API Tests">
+    <!-- Your existing API regression tests — unchanged -->
+    <test name="API Regression Tests">
         <groups>
             <define name="regression">
                 <include name="location"/>
@@ -25,6 +22,27 @@
         <packages>
             <package name="com.pullapart.api.tests"/>
         </packages>
+    </test>
+
+    <!-- Module 1: AI Test Generator -->
+    <test name="AI Test Generator">
+        <classes>
+            <class name="com.synlee.pullapart.api.qforge.generator.TestGeneratorTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 2: LLM Response Validator -->
+    <test name="LLM Response Validator">
+        <classes>
+            <class name="com.synlee.pullapart.api.qforge.validator.LlmValidatorTest"/>
+        </classes>
+    </test>
+
+    <!-- Module 3: Chatbot Test Suite -->
+    <test name="Chatbot Test Suite">
+        <classes>
+            <class name="com.synlee.pullapart.api.qforge.chatbot.ChatbotTest"/>
+        </classes>
     </test>
 
 </suite>

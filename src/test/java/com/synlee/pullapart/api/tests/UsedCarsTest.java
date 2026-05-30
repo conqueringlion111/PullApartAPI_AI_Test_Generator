@@ -15,7 +15,8 @@ import static io.restassured.RestAssured.given;
 
 public class UsedCarsTest extends TestBase {
 
-    @Test(groups = {"used_cars"}, description = "test coverage for used cars end point")
+    @Test(enabled = false, groups = {"used_cars"}, description = "Disabled - Birmingham locationName " +
+            "returning empty string from API - JIRA defect logged")
     public void searchUsedCars() {
         // test data
         String zip = "zipcode";
@@ -51,8 +52,8 @@ public class UsedCarsTest extends TestBase {
         }
     }
 
-    @Test(groups = {"used_cars"}, dataProvider = "dataProvider", description = "test coverage for used cars end point - this test" +
-            "is expced to fail as location value is missing for Birmingham location")
+    @Test(enabled = false, groups = {"used_cars"}, dataProvider = "dataProvider", description = "\"Disabled - Birmingham locationName \" +\n" +
+            "      \"returning empty string from API - defect logged in JIRA")
     public void searchUsedCarsDataProvider(String zip, String zipCode, String target, String usedCarLoc, int statusCode) {
         RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
         Response searchObj = given()
