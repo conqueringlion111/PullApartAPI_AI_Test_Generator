@@ -1,56 +1,31 @@
 PullApart API Automation Framework 🔨
+
 AI-Enhanced REST API Test Automation | Java • Rest Assured • TestNG • Anthropic Claude API
+
 A production-grade REST API automation framework for Pull-A-Part — a national
 used auto parts retailer — enhanced with AI-powered test generation, LLM response validation,
 chatbot testing, and an autonomous AI agent that analyzes test failures using the Anthropic Claude API.
 
 Highlights
 
-25 automated API tests across 4 business domains — Location, Search, Used Cars, Parts Pricing
-AI-powered test generator that produces Rest Assured test classes from plain English endpoint descriptions
-Autonomous AI agent that runs the full test suite, detects failures, sends them to Claude for root cause analysis, and generates an HTML report
-Real defect detected — the AI agent identified a Birmingham, AL location returning an empty locationName field from the API, flagged for human review, and the test was correctly disabled pending an API data fix
-Data-driven tests using TestNG @DataProvider for scalable regression coverage
-POJO-based deserialization for structured, type-safe response validation
+* 25 automated API tests across 4 business domains — Location, Search, Used Cars, Parts Pricing
+* AI-powered test generator that produces Rest Assured test classes from plain English endpoint descriptions
+* Autonomous AI agent that runs the full test suite, detects failures, sends them to Claude for root cause analysis, and generates an HTML report
+* Real defect detected — the AI agent identified a Birmingham, AL location returning an empty locationName field from the API, flagged for human review, and the test was correctly disabled pending an API data fix
+* Data-driven tests using TestNG @DataProvider for scalable regression coverage
+* POJO-based deserialization for structured, type-safe response validation
 
 
 Tech Stack
-ToolVersionPurposeJava17 (LTS)Core languageRest Assured5.5.7REST API test executionTestNG7.11.0Test runner and suite managementAnthropic Java SDK2.32.0Claude API integration (AI modules)Jackson2.18.3JSON parsing and POJO deserializationdotenv-java3.2.0Secure API key loading from .envSLF4J + Logback2.0.18LoggingMaven3.xBuild and dependency managementIntelliJ IDEACommunityIDE
-
-Project Structure
-pullapartMmlAPI/
-├── pom.xml
-├── .env                                        ← Anthropic API key (never committed)
-├── .gitignore
-├── README.md
-├── src/
-│   ├── main/java/com/synlee/qforge/
-│   │   ├── agent/                              ← AI Agent (4 classes)
-│   │   │   ├── QForgeAgent.java               ← Main entry point
-│   │   │   ├── TestRunnerAgent.java           ← Runs Maven, parses failures
-│   │   │   ├── FailureAnalyzerService.java    ← Sends failures to Claude
-│   │   │   └── AgentReportService.java        ← Generates HTML report
-│   │   ├── chatbot/
-│   │   │   └── ChatbotService.java            ← Multi-turn Claude chatbot
-│   │   ├── client/
-│   │   │   └── AnthropicClientProvider.java   ← Shared Anthropic API client
-│   │   ├── generator/
-│   │   │   └── TestGeneratorService.java      ← AI test code generator
-│   │   └── validator/
-│   │       └── LlmValidatorService.java       ← LLM response validator
-│   └── test/java/com/synlee/pullapart/api/
-│       ├── tests/                              ← PullApart API regression tests
-│       │   ├── LocationTest.java              ← /location endpoint tests
-│       │   ├── SearchTest.java                ← /Vehicle/Search endpoint tests
-│       │   ├── UsedCarsTest.java              ← /usedCars endpoint tests
-│       │   └── PartsPricingTest.java          ← Parts pricing endpoint tests
-│       └── qforge/                            ← AI module tests
-│           ├── generator/
-│           │   └── TestGeneratorTest.java     ← AI test generator tests
-│           ├── validator/
-│           │   └── LlmValidatorTest.java      ← LLM response validator tests
-│           └── chatbot/
-│               └── ChatbotTest.java           ← Chatbot test suite
+ToolVersionPurposeJava17 (LTS) Core language
+Rest Assured5.5.7REST API test execution
+TestNG7.11.0Test runner and suite management
+Anthropic Java SDK2.32.0 Claude API integration (AI modules)
+Jackson2.18.3 JSON parsing and POJO deserialization
+dotenv-java 3.2.0 Secure API key loading from .env
+SLF4J + Logback 2.0.18 Logging
+Maven 3.x Build and dependency management
+IntelliJ IDEA Community IDE
 
 Test Coverage
 PullApart API Regression Tests
