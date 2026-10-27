@@ -18,7 +18,7 @@ public class AnthropicClientProvider {
 
     private static AnthropicClient client;
 
-    // Private constructor — no one should instantiate this class directly
+    // Private constructor — do not instantiate this class directly
     private AnthropicClientProvider() {}
 
     /**

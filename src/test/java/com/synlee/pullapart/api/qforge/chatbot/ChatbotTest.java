@@ -67,7 +67,7 @@ public class ChatbotTest {
                         response.toLowerCase().contains("framework"),
                 "Response should mention TestNG or testing concepts");
 
-        System.out.println("[QForge] testBasicSingleTurnResponse — PASSED ✓");
+        System.out.println("[QForge] testBasicSingleTurnResponse — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ public class ChatbotTest {
         Assert.assertTrue(chatbot.hasHistory(),
                 "Chatbot should have conversation history");
 
-        System.out.println("[QForge] testMultiTurnConversationMemory — PASSED ✓");
+        System.out.println("[QForge] testMultiTurnConversationMemory — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -168,7 +168,7 @@ public class ChatbotTest {
                         response.toLowerCase().contains("jmeter"),
                 "Response should mention at least one QA automation tool");
 
-        System.out.println("[QForge] testPersonaAdherence — PASSED ✓");
+        System.out.println("[QForge] testPersonaAdherence — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -214,7 +214,7 @@ public class ChatbotTest {
                         response.toLowerCase().contains("load"),
                 "Response after reset should be about JMeter");
 
-        System.out.println("[QForge] testConversationResetBehavior — PASSED ✓");
+        System.out.println("[QForge] testConversationResetBehavior — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -252,7 +252,7 @@ public class ChatbotTest {
         Assert.assertEquals(chatbot.getTurnCount(), 0,
                 "Turn count should remain 0 after invalid inputs");
 
-        System.out.println("[QForge] testEdgeCaseEmptyInputHandling — PASSED ✓");
+        System.out.println("[QForge] testEdgeCaseEmptyInputHandling — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -286,7 +286,33 @@ public class ChatbotTest {
         Assert.assertTrue(response.length() >= MIN_RESPONSE_LENGTH,
                 "Response too short: " + response.length() + " chars");
 
-        System.out.println("[QForge] testCiCdPipelineKnowledge — PASSED ✓");
+        System.out.println("[QForge] testCiCdPipelineKnowledge — PASSED ");
+    }
+
+    @Test(priority = 7, description = "Chatbot accurately answers CI/CD pipeline question")
+    public void testAskCarQuestions() {
+        String response = chatbot.chat(
+                "How can I make 500 wheel horse power out of my sr20det powered s13 240sx?"
+        );
+
+        System.out.println("\n--- CI/CD Response ---");
+        System.out.println(response);
+
+        Assert.assertNotNull(response, "Response should not be null");
+        Assert.assertFalse(response.isBlank(), "Response should not be blank");
+
+        // Should mention Jenkins and/or Maven and/or TestNG
+//        Assert.assertTrue(
+//                response.toLowerCase().contains("jenkins") ||
+//                        response.toLowerCase().contains("pipeline") ||
+//                        response.toLowerCase().contains("maven") ||
+//                        response.toLowerCase().contains("mvn"),
+//                "Response should mention Jenkins, pipeline, or Maven");
+
+        Assert.assertTrue(response.length() >= MIN_RESPONSE_LENGTH,
+                "Response too short: " + response.length() + " chars");
+
+        System.out.println("[QForge] testCiCdPipelineKnowledge — PASSED");
     }
 
 }

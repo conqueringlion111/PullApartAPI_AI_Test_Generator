@@ -35,6 +35,7 @@
     <test name="LLM Response Validator">
         <classes>
             <class name="com.synlee.pullapart.api.qforge.validator.LlmValidatorTest"/>
+            <class name="com.synlee.pullapart.api.qforge.validator.LlmJudgeTest"/>
         </classes>
     </test>
 
