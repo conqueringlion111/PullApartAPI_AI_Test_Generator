@@ -69,7 +69,7 @@ public class LlmValidatorTest {
         Assert.assertTrue(response.getLength() >= MIN_RESPONSE_LENGTH,
                 "Response too short: " + response.getLength() + " chars");
 
-        System.out.println("[QForge] testResponseIsNotEmptyAndWithinTimeLimit — PASSED ✓");
+        System.out.println("[QForge] testResponseIsNotEmptyAndWithinTimeLimit — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -118,7 +118,7 @@ public class LlmValidatorTest {
                         response.containsKeyword("internal"),
                 "Response should describe 500 meaning");
 
-        System.out.println("[QForge] testResponseContainsExpectedKeywords — PASSED ✓");
+        System.out.println("[QForge] testResponseContainsExpectedKeywords — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -162,7 +162,7 @@ public class LlmValidatorTest {
         Assert.assertTrue(detailedResponse.getLength() <= MAX_RESPONSE_LENGTH,
                 "Detailed response too long: " + detailedResponse.getLength() + " chars");
 
-        System.out.println("[QForge] testResponseLengthIsWithinBounds — PASSED ✓");
+        System.out.println("[QForge] testResponseLengthIsWithinBounds — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -204,7 +204,7 @@ public class LlmValidatorTest {
         Assert.assertTrue(response.getLength() >= MIN_RESPONSE_LENGTH,
                 "Response too short: " + response.getLength() + " chars");
 
-        System.out.println("[QForge] testSystemPromptBehavior — PASSED ✓");
+        System.out.println("[QForge] testSystemPromptBehavior — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -230,7 +230,7 @@ public class LlmValidatorTest {
         Assert.assertTrue(response.getResponseTimeMs() <= MAX_RESPONSE_TIME_MS,
                 "Response time exceeded limit");
 
-        System.out.println("[QForge] testEdgeCaseShortPrompt — PASSED ✓");
+        System.out.println("[QForge] testEdgeCaseShortPrompt — PASSED ");
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -268,7 +268,7 @@ public class LlmValidatorTest {
                         response.containsKeyword("assertion"),
                 "Response should contain API testing concepts");
 
-        System.out.println("[QForge] testQaDomainKnowledgeAccuracy — PASSED ✓");
+        System.out.println("[QForge] testQaDomainKnowledgeAccuracy — PASSED ");
     }
 
 }
