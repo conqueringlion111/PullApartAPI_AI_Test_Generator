@@ -115,6 +115,16 @@ Returns 200 OK on success."
 Sends prompts to Claude and validates response quality against rules:
 response time, minimum/maximum length, required keywords, system prompt adherence, and edge cases.
 
+### Includes an LLM-as-a-Judge layer (LlmJudgeService) that uses Claude as an impartial evaluator to grade response quality, catching answers that pass keyword and length checks but are wrong:
+
+Rubric scoring — 1–5 score plus pass/fail against plain-English criteria
+Reference-based grading — semantic match to a golden answer (data-driven)
+Groundedness checks — flags hallucinated claims not supported by the context (RAG-style)
+Pairwise comparison — runs A/B and B/A to detect position bias
+Judge validation — negative controls confirm the judge fails known-bad answers, and repeated runs confirm consistent verdicts (temperature 0, reasoning before score)
+
+Tech: Anthropic Java SDK, AssertJ, TestNG, ExtentReports
+
 ### Chatbot Test Suite
 Tests a Claude-backed QA automation chatbot across 6 scenarios including
 multi-turn conversation memory, persona adherence, conversation reset, and edge case handling.
